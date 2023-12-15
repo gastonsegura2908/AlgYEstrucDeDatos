@@ -1,0 +1,76 @@
+https://codebeautify.org/jsonviewer
+
+archivo json:
+    {
+        "laureates": [
+            {
+                "id": "1",
+                "firstname": "Wilhelm Conrad",
+                "surname": "Röntgen",
+                "born": "1845-03-27",
+                "died": "1923-02-10",
+                "bornCountry": "Prussia (now Germany)",
+                "bornCountryCode": "DE",
+                "bornCity": "Lennep (now Remscheid)",
+                "diedCountry": "Germany",
+                "diedCountryCode": "DE",
+                "diedCity": "Munich",
+                "gender": "male",
+                "prizes": [
+                    {
+                    "year": "1901",
+                    "affiliations": [
+                        {
+                        "name": "Munich University",
+                        "country": "Germany"
+                        }
+                    ]
+                    }
+                ]
+            }, 
+            (...)
+        ]
+    }
+
+
+NODO RAIZ -> NODO laureates
+    NODO laureates -> NODO 0
+        NODO 0 -> NODO id -> NODO 1 -> NULL
+               -> NODO firstname -> NODO "Wilhelm Conrad" -> NULL
+               -> NODO prizes -> NODO 0
+                    NODO 0 -> NODO year -> NODO "1912"
+                           <-
+               <-
+        NODO 1 -> NODO id -> NODO 1 -> NULL
+               -> NODO firstname -> NODO "Wilhelm Conrad" -> NULL
+               -> NODO prizes -> NODO 0
+                    NODO 0 -> NODO year -> NODO "1912"
+                           <-
+               <-
+        (...)
+        <-
+    NODO hola -> NULL
+    <-
+//fin arbor m-ario
+
+Constructor de arbol binario a partir de m-ario
+NODO RAIZ -> NODO laureates
+    NODO laureates -> NODO 0
+        NODO 0 -> NODO id -> NODO 1 -> NULL
+               -> NODO firstname -> NODO "Wilhelm Conrad" -> NULL
+               -> NODO prizes -> NODO 0
+                    NODO 0 -> NODO year -> NODO "1912"
+                           <-
+               <-
+        NODO 1 -> NODO id -> NODO 1 -> NULL
+               -> NODO firstname -> NODO "Wilhelm Conrad" -> NULL
+               -> NODO prizes -> NODO 0
+                    NODO 0 -> NODO year -> NODO "1912"
+                           <-
+               <-
+        (...)
+        <-
+    NODO hola -> NULL
+    <-
+
+tomar primera llave como raiz
